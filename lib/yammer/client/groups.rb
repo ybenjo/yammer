@@ -36,7 +36,7 @@ module Yammer
       # @rate_limited unconfirmed
       # @param name [String] The name of group.
       # @param private [String] Used true when creating or updating groups to make them private.
-      def get_group(name, options={})
+      def create_group(name, options={})
         post('groups', options.merge({:name => name}))
       end
     end
