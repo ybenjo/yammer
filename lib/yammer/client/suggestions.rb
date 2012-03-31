@@ -9,7 +9,6 @@ module Yammer
       # @rate_limited 
       # @param options [Hash] A customizable set of options.
       # @option options [Integer] :limit Returns only Return only the specified number of suggestions.
-      # @option options [String] :id When declining a suggestion, pass its id.
       # @return [Hashie::Mash]
       # @see https://developer.yammer.com/api/#suggestions
       # @example
@@ -19,9 +18,11 @@ module Yammer
       end
 
       # Decline a suggestion specfic id.
-      # @option options [String] :id When declining a suggestion, pass its id.
+      # @param id [Integer/String] When declining a suggestion, pass its id.
+      # @example
+      # Yammer.decline_suggestion(12345)
       def decline_suggestion(id)
-        delete("suggestions/#{id}", options={})
+        delete("suggestions/#{id}")
       end
     end
   end
