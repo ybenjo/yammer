@@ -15,7 +15,7 @@ module Yammer
       # @see https://developer.yammer.com/api/#search
       # @example 
       #   Yammer.search("my boss")
-      def messages(query, options={})
+      def search(query, options={})
         get('search', options.merge({:search => query}))
       end
     end
