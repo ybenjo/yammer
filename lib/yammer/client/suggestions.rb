@@ -12,8 +12,8 @@ module Yammer
       # @return [Hashie::Mash]
       # @see https://developer.yammer.com/api/#suggestions
       # @example
-      # Yammer.get_suggestions
-      def get_suggestions(options={})
+      # Yammer.suggestions
+      def suggestions(options={})
         get('suggestions', options)
       end
 
