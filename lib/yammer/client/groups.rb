@@ -15,7 +15,7 @@ module Yammer
       # @option options [String] :reverse Return results in reverse order if uses true.
       # @option options [String] :private Used when creating or updating groups to make them private if uses true.
       # @return [Hashie::Mash] Informations of groups.
-      def get_groups(options={})
+      def groups(options={})
         get("groups", options)
       end
 
@@ -26,7 +26,7 @@ module Yammer
       # @rate_limited unconfirmed
       # @param id [Integer] The id of specific group.
       # @return [Hashie::Mash] Informations of group which id is #{id}.
-      def get_group(id, options={})
+      def group(id, options={})
         get("groups/#{id}", options)
       end
 
